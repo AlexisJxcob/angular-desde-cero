@@ -101,17 +101,11 @@ let menu = {
 
 function multiplyNumeric(obj) {
     for (let key in obj) {
-        if (typeof obj[key] == Number);
-        obj[key] *= 2;
+        if (typeof obj[key] === "number") {
+            obj[key] *= 2;
+        }
     }
-    return obj; // esto en caso de que no haya propiedades numéricas devuelve el objeto
+    return obj;
 }
 
 console.log(multiplyNumeric(menu));
-
-// Después de la llamada
-menu = {
-    width: 400,
-    height: 600,
-    title: "Mi menú",
-};
